@@ -8,13 +8,13 @@
 */
 
 Console.Clear();
-Console.Write("Ведите число: ");
+Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 if(a % 2 == 0)
 {
-    Console.WriteLine(&"Да. Введенное число {a} четное (делится на 2 без остатка)");
+    Console.WriteLine($"Да. Введенное число {a} четное (делится на 2 без остатка)");
 }
 else
 {
-    Console.WriteLine(&"Нет. Введенное число {a} нечетное (не делится на 2 без остатка)");
+    Console.WriteLine($"Нет. Введенное число {a} нечетное (не делится на 2 без остатка)");
 }
