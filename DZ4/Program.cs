@@ -8,13 +8,22 @@
 Console.Clear();
 Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
-int i = 2;
 if(a > 1)
 {
-    while(i <= a);
+    int i = 2;
+    while(i <= a)
     {
         Console.Write($"{i} ");
         i += 2;
+    }
+}
+else if(a < 1)
+{
+    int i = 0;
+    while(i >= a)
+    {
+        Console.Write($"{i} ");
+        i -= 2;
     }
 }
 else
