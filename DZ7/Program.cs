@@ -10,6 +10,20 @@ Console.Clear();
 Console.Write("Введите число: ");
 int N = Convert.ToInt32(Console.ReadLine());
 int n = N;
+if(n / 100 == 0) Console.WriteLine("В этом числе нет искомой (третьей) цифры");
+else
+ {
+    while(n > 1000) n /= 10;
+    Console.WriteLine($"В числе {N} третья цифра слева - {n % 10}");
+ }
+Console.ReadKey();
+
+
+
+/*Console.Clear();
+Console.Write("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+int n = N;
 int x1 = 0, x2 = 0, x3 = 0;
 if(n / 100 == 0)
 {
@@ -27,3 +41,4 @@ else
 Console.WriteLine($"В числе {N} третья цифра слева - {x3}");
 Console.ReadKey();
 }
+*/
