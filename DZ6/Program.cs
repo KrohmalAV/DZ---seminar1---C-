@@ -9,10 +9,6 @@
 
 Console.Clear();
 Console.Write("Введите трехзначное  целое число: ");
-string Z = Console.ReadLine();
-if(Z.Length == 3) 
-{
-    int z = Convert.ToInt32(Z);
-    Console.WriteLine(((z / 10) % 10));
-} 
+int Z = Convert.ToInt32(Console.ReadLine());
+if((Z / 100 > 0) && (Z / 100) < 10) Console.WriteLine(((Z / 10) % 10));
 else Console.WriteLine("Нужно было ввести трехзначное число");
