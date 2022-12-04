@@ -5,8 +5,7 @@
 6, 1, 33 -> [6, 1, 33]
 */
 
-// Заполнение массива вручную
-void FillArrayManually(double[]array)
+void FillArrayManually(double[]array)   // Заполнение массива вручную
 {
     for(int i = 0; i < 8; i++)
     {
@@ -15,14 +14,12 @@ void FillArrayManually(double[]array)
     }
 }
 
-// //Заполнение массива рандомно от 0 до 99
-// void FillArray(double[]array)
+// void FillArray(double[]array)   //Заполнение массива рандомно от 0 до 99
 // {
 //     for(int i = 0; i < 8; i++) array[i] = new Random().Next(0, 100);
 // }
 
-// Вывод массива
-void PrintArray(double[]array)
+void PrintArray(double[]array)   // Вывод массива
 {
     Console.Write($"[{array[0]}");
     for(int i = 1; i < 8; i++) Console.Write($", {array[i]}");
