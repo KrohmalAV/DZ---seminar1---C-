@@ -8,7 +8,7 @@
 // Ввод чисел через пробел единой строкой
 Console.Clear();
 Console.Write("Введите числа через пробел: ");
-string numM = Console.ReadLine();
+string numM = Console.ReadLine()!;
 string[] array = numM.Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries);
 double[] arrayInt = array.Select(double.Parse).ToArray();
 int count = 0;
@@ -27,7 +27,7 @@ while(string.Compare(NumStr, "stop", true) < 0)
 {
     int NumInt = Convert.ToInt32(NumStr);
     Console.Write($"{index} число - ");
-    NumStr = Console.ReadLine();
+    NumStr = Console.ReadLine()!;
     if(NumInt > 0) count2 += 1;
     index++;
 }
