@@ -18,6 +18,13 @@ Console.Write("задайте коэффициент k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("задайте число b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
-double x = (b2 - b1) / (k1 - k2);
-double y = k2 * x + b2;
-Console.WriteLine($"Точка пересечения указанных функций имеет координаты ({x}, {y})");
+if(k1 == k2 && b1 == b2)
+    Console.WriteLine("При указанных числах функции полностью совпадают");
+else if(k1 == k2 && b1 != b2)
+    Console.WriteLine("При указанных числах функции параллельны. Точек совпадения нет.");
+else
+{
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k2 * x + b2;
+    Console.WriteLine($"Точка пересечения указанных функций имеет координаты ({x}, {y})");
+}
