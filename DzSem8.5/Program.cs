@@ -8,7 +8,7 @@
 */
 
 // Метод заполнения двумерного массива (по спирали)
-int[,] FillMatrix(int row, int column, int min, int max)
+int[,] FillMatrix(int row, int column)
 {
     int[,] array = new int[row, column];
     int count = 1;
@@ -42,5 +42,5 @@ void PrintMatrix(int[,]array)
 }
 
 Console.Clear();
-int[,] array = FillMatrix(4, 4, 0, 10);
+int[,] array = FillMatrix(4, 4);
 PrintMatrix(array);
