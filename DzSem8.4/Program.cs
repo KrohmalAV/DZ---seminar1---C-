@@ -17,17 +17,15 @@ int[,,] FillMatrix(int row1, int column, int row2, int min, int max)
     for(int i = 0; i < row1; i++) 
         for(int j = 0; j < column; j++)
             for(int k = 0; k < row2; k++)
-                // array[i,j,k] = new Random().Next(min, max);
-                {
-                    int num = new Random().Next(min, max);
-                    foreach(int arr in array)
-                        {
-                            if(num == arr)
-                                k--;
-                            else
-                                array[i,j,k] = num;
-                        }
-                }
+            {
+                bool flag = false;
+                int num = new Random().Next(min, max);
+                foreach(int arr in array)
+                    if(num == arr)
+                        flag = true;
+                if (flag == false) array[i,j,k] = num;
+                else k--;
+            }
     return array;
 }
 
@@ -47,6 +45,10 @@ Console.Write("Введите количество столбцов в трех�
 int column = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество рядов в трехмерном массиве: ");
 int row2 = Convert.ToInt32(Console.ReadLine());
-
-int[,,] array = FillMatrix(row1, column, row2, 10, 100);
-PrintMatrix(array);
+if (row1 * column * row2 > 100 - 10)
+    Console.Write("Создать массив такого размера с уникальными числами невозможно. Уменьшите размер массива.");
+else
+{
+    int[,,] array = FillMatrix(row1, column, row2, 10, 100);
+    PrintMatrix(array);
+}
